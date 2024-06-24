@@ -1,0 +1,18 @@
+{{#extend "layouts/main"}}
+    {{#content "body"}}
+        <h1>Dashboard</h1>
+        <a href="/dashboard/new">Create New Post</a>
+        {{#if posts.length}}
+            {{#each posts}}
+                <div class="post">
+                    <h2>{{title}}</h2>
+                    <p>{{content}}</p>
+                    <p>Published on {{createdAt}}</p>
+                    <a href="/dashboard/{{id}}/delete">Delete</a>
+                </div>
+            {{/each}}
+        {{else}}
+            <p>No posts found.</p>
+        {{/if}}
+    {{/content}}
+{{/extend}}
