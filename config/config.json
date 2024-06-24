@@ -1,0 +1,23 @@
+{
+    "development": {
+      "username": "root",
+      "password": "password",
+      "database": "tech_blog_dev",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "root",
+      "password": "password",
+      "database": "tech_blog_test",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "your_prod_username",
+      "password": "your_prod_password",
+      "database": "your_prod_database",
+      "host": "your_prod_host",
+      "dialect": "mysql"
+    }
+  }  
