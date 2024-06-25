@@ -1,9 +1,14 @@
-const { Sequelize } = require('sequelize');
-const path = require('path');
+require('dotenv').config();
 
-const env = process.env.NODE_ENV || 'development';
-const config = require(path.join(__dirname, '..', 'config', 'config.json'))[env];
-
-const sequelize = new Sequelize(config.database, config.username, config.password, config);
-
-module.exports = sequelize;
+module.exports = {
+  development: {
+    username: 'root',   // Ensure this matches your MySQL username
+    password: 'your_password',   // Ensure this matches your MySQL password
+    database: 'tech_blog',  // Ensure this matches your MySQL database name
+    host: 'localhost',
+    dialect: 'mysql',
+  },
+  production: {
+    
+  }
+};
